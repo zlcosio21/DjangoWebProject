@@ -5,3 +5,5 @@
 /DjangoWebApp/__init__.py
 
 /DjangoWebApp/__pycache__/
+
+/DjangoWebApp/migrations/

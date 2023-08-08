@@ -3,3 +3,5 @@
 /DjangoWebProject/__init__.py
 
 /DjangoWebApp/__init__.py
+
+DjangoWebApp/__pycache__/

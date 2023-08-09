@@ -1,9 +1,10 @@
 /DjangoWebProject/__pycache__
-
 /DjangoWebProject/__init__.py
 
 /DjangoWebApp/__init__.py
-
 /DjangoWebApp/__pycache__/
-
 /DjangoWebApp/migrations/
+
+/servicios/migrations/
+/servicios/__init__.py
+/servicios/__pycache__/

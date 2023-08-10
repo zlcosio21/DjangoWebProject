@@ -8,3 +8,5 @@
 /servicios/migrations/
 /servicios/__init__.py
 /servicios/__pycache__/
+
+db.sqlite3

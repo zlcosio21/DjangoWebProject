@@ -9,4 +9,8 @@
 /servicios/__init__.py
 /servicios/__pycache__/
 
+/blog/migrations/
+/blog/__init__.py
+/blog/__pycache__/
+
 db.sqlite3

@@ -11,11 +11,6 @@ def tienda(request):
     return render(request, "DjangoWebApp/tienda.html")
 
 
-def blog(request):
-
-    return render(request, "DjangoWebApp/blog.html")
-
-
 def contacto(request):
 
     return render(request, "DjangoWebApp/contacto.html")

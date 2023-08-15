@@ -26,13 +26,13 @@
     <section>
       <div style="color: aliceblue; margin: auto; display: flex; align-items: center; justify-content: center;"> 
 
-        Categorias:   
+        Categorias:&nbsp;
 
         {% for post in posts %}
 
           {% for categoria in post.categorias.all %}
 
-            {{categoria.nombre}} &nbsp;|
+            <a class="categoria" href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;&nbsp;
 
           {% endfor %}
 

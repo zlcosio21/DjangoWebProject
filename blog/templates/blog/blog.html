@@ -13,14 +13,28 @@
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
               <h2 class="section-heading mb-4" >
                 <h1 class="section-heading-upper">{{post.titulo}}</h1>
-                <h4 class="section-heading-lower">{{post.contenido}}</h4>
-                <h5 class="section-heading-upper">{{post.categorias}}</h5>
-                <h5 class="section-heading-lower">{{post.autor}}</h5>
+                <h4 class="section-heading-lower">{{post.contenido}}</h4> <br>
+                <h6 class="section-heading-lower" style="display: flex; flex-direction: row;">Autor: {{post.autor}}</h6>
               </h2>
             </div>
           </div>
         </div>
-    </section>    
+    </section>
 
     {% endfor %}
+
+    <section>
+      <div style="color: aliceblue; margin: auto; display: flex; align-items: center; justify-content: center;"> 
+
+        Categorias:   
+
+        {% for categoria in categorias %}
+
+          {{categoria.nombre}},
+
+        {% endfor %}
+        
+      </div>
+    </section>
+    
 {% endblock %}

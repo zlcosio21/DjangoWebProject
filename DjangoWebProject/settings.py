@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'DjangoWebApp',
     'servicios',
     'blog',
+    'contacto',
 ]
 
 MIDDLEWARE = [

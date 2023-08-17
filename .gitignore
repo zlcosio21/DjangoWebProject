@@ -13,4 +13,8 @@
 /blog/__init__.py
 /blog/__pycache__/
 
+/contacto/migrations/
+/contacto/__init__.py
+/contacto/__pycache__/
+
 db.sqlite3

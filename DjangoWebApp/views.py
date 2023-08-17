@@ -9,8 +9,3 @@ def home(request):
 def tienda(request):
 
     return render(request, "DjangoWebApp/tienda.html")
-
-
-def contacto(request):
-
-    return render(request, "DjangoWebApp/contacto.html")

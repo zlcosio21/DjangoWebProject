@@ -4,6 +4,15 @@
 
 {% block content %}
 
-    <p style="color: white">{{formulario}}</p>
+    <div class="formularioEmail" >
+        
+        <form action="" method="post" style="text-align: center;">
+            {% csrf_token %}
+            <table style="color: white; margin: 20px auto;">{{formulario.as_table}}</table>
+            <input type="submit" value="Enviar" style="width: 200px;">
+            <input type="reset" value="Reiniciar" style="width: 80px;">
+        </form>    
+
+    </div>    
 
 {% endblock %}

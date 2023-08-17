@@ -286,3 +286,11 @@ ul.errorlist{
 .categoria:hover {
   text-decoration: underline;
 }
+
+.formularioEmail {
+  background-color: rgba(24, 64, 8);
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 1px 0px;
+}

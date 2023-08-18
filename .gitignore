@@ -1,5 +1,6 @@
 /DjangoWebProject/__pycache__
 /DjangoWebProject/__init__.py
+/DjangoWebProject/private.py
 
 /DjangoWebApp/__init__.py
 /DjangoWebApp/__pycache__/
@@ -18,3 +19,4 @@
 /contacto/__pycache__/
 
 db.sqlite3
+/__pycache__

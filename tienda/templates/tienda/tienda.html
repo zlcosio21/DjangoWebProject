@@ -4,6 +4,37 @@
 
 {% block content %}
 
-    <p style="color: aliceblue; text-align: center;">Tienda</p>
-    
+    {% for producto in productos %}
+
+    <section class="page-section clearfix">
+        <div class="container">
+          <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{producto.imagen.url}}" alt="" style="width: 50%; height: 50%;">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+              <h2 class="section-heading mb-4" >
+                <h1 class="section-heading-upper">{{producto.nombre}}</h1>
+                <h4 class="section-heading-lower">Precio: {{producto.precio}}</h4> <br>
+                <h6 class="section-heading-lower" style="display: flex; flex-direction: row;">
+                    Disponibilidad: 
+                    
+                    {% if producto.disponibilidad == True %} 
+
+                        Disponible  
+                    
+                    {% else %}
+
+                        No Disponible
+
+                    {% endif %}    
+                    
+                </h6>
+
+              </h2>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    {% endfor %}
+
 {% endblock %}

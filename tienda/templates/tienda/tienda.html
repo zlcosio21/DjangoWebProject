@@ -4,37 +4,30 @@
 
 {% block content %}
 
+<div class="container">
+    <div class="row">
+
     {% for producto in productos %}
 
-    <section class="page-section clearfix">
-        <div class="container">
-          <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{producto.imagen.url}}" alt="" style="width: 50%; height: 50%;">
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-              <h2 class="section-heading mb-4" >
-                <h1 class="section-heading-upper">{{producto.nombre}}</h1>
-                <h4 class="section-heading-lower">Precio: {{producto.precio}}</h4> <br>
-                <h6 class="section-heading-lower" style="display: flex; flex-direction: row;">
-                    Disponibilidad: 
-                    
-                    {% if producto.disponibilidad == True %} 
+    <div class="col-md-3" style="margin-block: 15px;">
 
-                        Disponible  
-                    
-                    {% else %}
+        <div class="card" style="width: 100%;">
 
-                        No Disponible
+            <img src="{{producto.imagen.url}}" alt="" style="width: auto; height: 200px;">
 
-                    {% endif %}    
-                    
-                </h6>
+            <div class="card-body" style="text-align: center;"> 
 
-              </h2>
+    `           <h5 class="card-title">{{producto.nombre}}</h5>
+                <p class="card-text">${{producto.precio}}</p>
+
             </div>
-          </div>
-        </div>
-    </section>
 
+        </div>
+
+    </div>    
     {% endfor %}
+
+    </div>    
+</div>
 
 {% endblock %}

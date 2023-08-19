@@ -18,10 +18,15 @@
 /contacto/__init__.py
 /contacto/__pycache__/
 
-db.sqlite3
-/__pycache__
-.env
-
 /tienda/migrations/
 /tienda/__init__.py
 /tienda/__pycache__/
+
+/carro/migrations/
+/carro/__init__.py
+/carro/__pycache__/
+
+
+db.sqlite3
+/__pycache__
+.env

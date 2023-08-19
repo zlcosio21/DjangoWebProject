@@ -19,3 +19,8 @@ class Carro:
                 "cantidad":1,
                 "imagen":producto.imagen.url,
             }
+        else:
+            for key, value in self.carro.items():
+                if key == str(producto.id):
+                    value[producto.id] = value["cantidad"] + 1
+                    break

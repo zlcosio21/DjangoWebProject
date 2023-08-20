@@ -30,5 +30,3 @@ class Carro:
                     break
         
         self.guardar_carro()
-
-        

@@ -30,3 +30,9 @@ class Carro:
                     break
         
         self.guardar_carro()
+
+    def eliminar(self, producto):
+        producto.id = str(producto)
+        if producto.id in self.carro:
+            del self.carro[producto.id]
+            self.guardar_carro()

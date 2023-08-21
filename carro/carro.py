@@ -7,8 +7,8 @@ class Carro:
 
         if not carro:
             carro = self.session["carro"] = {}
-        else:
-            self.carro = carro
+        
+        self.carro = carro
 
     def guardar_carro(self):
             self.session["carro"] = self.carro

@@ -26,6 +26,9 @@
 /carro/__init__.py
 /carro/__pycache__/
 
+/autenticacion/migrations/
+/autenticacion/__init__.py
+/autenticacion/__pycache__/
 
 db.sqlite3
 /__pycache__

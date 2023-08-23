@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 
 
@@ -25,9 +25,25 @@ class VistaRegistro(View):
                 
             return render(request, "registro/registro.html", {"form":form})
         
+
 def iniciar_sesion(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            nombre_usuario = form.cleaned_data.get("username")
+            contrasena = form.cleaned_data.get("password")
+            usuario = authenticate(username=nombre_usuario, password=contrasena)
+            if usuario is not None:
+                login(request, usuario)
+                return redirect('home')
+            else:
+                messages.error(request, "Usuario no valido")
+        else:
+            messages.error(request, "Informacion incorrectamente")
+
     form = AuthenticationForm()
     return render(request, "iniciar_sesion/iniciar_sesion.html", {"form":form})
+
 
 def cerrar_sesion(request):
     logout(request)

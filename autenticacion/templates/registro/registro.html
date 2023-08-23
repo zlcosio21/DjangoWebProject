@@ -4,6 +4,12 @@
 
 {% block content %}
 
-    <p style="color: white;">Hola mundo</p>
+    <form method="post" action="" style="color: white;">
+
+        {% csrf_token %}
+
+        {{form}}
+
+    </form>
 
 {% endblock %}

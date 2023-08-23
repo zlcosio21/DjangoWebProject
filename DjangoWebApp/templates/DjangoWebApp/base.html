@@ -34,7 +34,7 @@
         
       {% else %}
 
-        <a href="" class="categoria">Iniciar Sesion</a> &nbsp; &nbsp; &nbsp; 
+        <a href="{% url 'iniciar_sesion' %}" class="categoria">Iniciar Sesion</a> &nbsp; &nbsp; &nbsp; 
         <a href="{% url 'autenticacion' %}" class="categoria">Registrarse</a>
 
       {% endif %}

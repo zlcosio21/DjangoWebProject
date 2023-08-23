@@ -4,11 +4,15 @@
 
 {% block content %}
 
-    <form method="post" action="" style="color: white;">
+    <form method="post" action="" style="color: white; display: flex; flex-direction: column; width: 75%; margin: auto;">
 
         {% csrf_token %}
 
         {{form}}
+
+        <div style="display: inline-block; width: 100%; text-align: left;">
+            <button type="submit" class="btn btn-success" style="margin: 5px;">Registrate</button>
+        </div>
 
     </form>
 

@@ -39,7 +39,7 @@ def iniciar_sesion(request):
             else:
                 messages.error(request, "Usuario no valido")
         else:
-            messages.error(request, "Informacion incorrectamente")
+            messages.error(request, "Informacion incorrecta")
 
     form = AuthenticationForm()
     return render(request, "iniciar_sesion/iniciar_sesion.html", {"form":form})

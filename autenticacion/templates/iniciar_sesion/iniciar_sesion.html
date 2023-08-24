@@ -10,9 +10,19 @@
 
         {{form}}
 
-        <div style="display: inline-block; width: 100%; text-align: left;">
+        <div style="display: inline-block; width: 100%; text-align: left;">  
             <button type="submit" class="btn btn-success" style="margin: 20px 1px;">Iniciar Sesion</button>
         </div>
+
+        {% if messages %}
+
+            {% for msg in messages %}
+
+                <span class="alert alert-{{msg.tags}}">{{msg}}</span>
+
+            {% endfor %}
+
+        {% endif %}
 
     </form>
 

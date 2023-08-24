@@ -1,6 +1,9 @@
 from django.shortcuts import render, HttpResponse
+from carro.carro import Carro
 
 # Create your views here.
 def home(request):
 
-    return render(request, "DjangoWebApp/home.html")
+    carro = Carro(request)
+
+    return render(request, "DjangoWebApp/home.html", {"carro":carro})

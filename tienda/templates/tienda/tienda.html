@@ -8,7 +8,17 @@
 
     <div style="float: right;">
 
-        {% include "carro/widget.html" %}
+        {% if request.user.is_authenticated %}
+        
+            {% include "carro/widget.html" %}
+
+        {% else %}
+            
+            <div class="alert alert-danger" style="margin: 15px 1px;">
+                Iniciar sesion para ver carro
+            </div>
+
+        {% endif %}
 
     </div>
 

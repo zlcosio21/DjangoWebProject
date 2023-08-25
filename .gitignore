@@ -30,6 +30,10 @@
 /autenticacion/__init__.py
 /autenticacion/__pycache__/
 
+/pedidos/migrations/
+/pedidos/__init__.py
+/pedidos/__pycache__/
+
 db.sqlite3
 /__pycache__
 .env

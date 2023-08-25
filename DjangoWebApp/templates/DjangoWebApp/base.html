@@ -29,7 +29,7 @@
       
       {% if user.is_authenticated %}
 
-        Has iniciado sesion {{user.username}}&nbsp; &nbsp; &nbsp;
+        Bienvenido {{user.username}}&nbsp; &nbsp; &nbsp;
         <a href="{% url 'cerrar_sesion' %}" class="categoria">Cerrar sesion</a>
         
       {% else %}

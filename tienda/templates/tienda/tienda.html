@@ -15,9 +15,11 @@
         {% else %}
             
             <div class="alert alert-danger" style="margin: 15px 1px;">
-                Iniciar sesion para ver carro
+                <a href="{% url 'iniciar_sesion' %}" class="categoria" style="color: #721c24 !important;">
+                    Iniciar sesion para ver carro
+                </a>
             </div>
-
+            
         {% endif %}
 
     </div>

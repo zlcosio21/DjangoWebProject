@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from pedidos.models import Pedido, LineaPedido
 from carro.carro import Carro
 from django.contrib import messages
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from dotenv import load_dotenv
+from django.core.mail import send_mail
+import os 
+load_dotenv()
+EMAIL = os.getenv("EMAIL")
+ 
 
 # Create your views here.
 @login_required(login_url = "autenticacion/iniciar_seson")
@@ -24,4 +32,32 @@ def procesar_pedido(request):
 
     LineaPedido.objects.bulk_create(lineas_pedido)
 
+    enviar_email(
+
+        pedido = pedido,
+        lineas_pedido = lineas_pedido,
+        nombre_usuario = request.user.username,
+        email_usuario = request.user.email,
+    
+    )
+
     messages.success(request, "El pedido ha sido un exito")
+
+    return redirect('home')
+
+def enviar_email(**kwargs):
+
+    asunto = "Gracias por realizar el pedido"
+    mensaje = render_to_string("emails/pedido.html",{
+
+        "pedido": kwargs.get("pedido"),
+        "lineas_pedido": kwargs.get("lineas_pedido"),
+        "nombre_usuario": kwargs.get("nombre_usuario"),
+        "email_usuario": kwargs.get("email_usuario")
+
+    })
+
+    mensaje_texto = strip_tags(mensaje)
+    to = kwargs.get("email_usuario")
+
+    send_mail(asunto, mensaje_texto, EMAIL, [to], html_message=mensaje)

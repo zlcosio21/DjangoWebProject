@@ -41,8 +41,6 @@ def procesar_pedido(request):
     
     )
 
-    messages.success(request, "El pedido ha sido un exito")
-
     return redirect('home')
 
 def enviar_email(**kwargs):
